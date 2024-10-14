@@ -14,6 +14,7 @@ dependencies:
   path: ^1.8.3        # Nécessaire pour gérer les chemins de fichiers avec sqflite
   excel: ^2.0.7       # Pour l'export des fichiers Excel
   share_plus: ^6.3.0  # Pour partager le fichier via WhatsApp
+  path_provider: ^2.1.4
 
 
 dev_dependencies:

@@ -5,9 +5,10 @@ import 'package:fluttertoast/fluttertoast.dart';  // Import du package flutterto
 
 class StatInputPage extends StatefulWidget {
   final String player;
-  StatInputPage({required this.player});
+  const StatInputPage({super.key, required this.player});
 
   @override
+  // ignore: library_private_types_in_public_api
   _StatInputPageState createState() => _StatInputPageState();
 }
 
@@ -74,7 +75,7 @@ class _StatInputPageState extends State<StatInputPage> {
         child: Column(
           children: <Widget>[
             // Section Attaque
-            Text('Attaques', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text('Attaques', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -93,9 +94,9 @@ class _StatInputPageState extends State<StatInputPage> {
                 }),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Section Service
-            Text('Services', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text('Services', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -114,9 +115,9 @@ class _StatInputPageState extends State<StatInputPage> {
                 }),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Section Réception
-            Text('Réceptions', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text('Réceptions', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -132,9 +133,9 @@ class _StatInputPageState extends State<StatInputPage> {
                 }),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Section Bloc
-            Text('Blocs', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text('Blocs', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -150,11 +151,11 @@ class _StatInputPageState extends State<StatInputPage> {
                 }),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Bouton pour sauvegarder les stats
             ElevatedButton(
               onPressed: _saveStats,
-              child: Text('Sauvegarder les Stats'),
+              child: const Text('Sauvegarder les Stats'),
             ),
           ],
         ),
@@ -168,9 +169,9 @@ Widget buildStatButton(String label, Color color, VoidCallback onPressed) {
     onPressed: onPressed,
     style: ElevatedButton.styleFrom(
       backgroundColor: color,  // Utiliser directement Color pour backgroundColor
-      minimumSize: Size(80, 80), // Taille similaire à l'image
+      minimumSize: const Size(80, 80), // Taille similaire à l'image
     ),
-    child: Text(label, style: TextStyle(color: Colors.white)),
+    child: Text(label, style: const TextStyle(color: Colors.white)),
   );
 }
 
