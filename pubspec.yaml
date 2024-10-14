@@ -1,0 +1,25 @@
+name: statistics
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  fluttertoast: ^8.1.0
+  flutter:
+    sdk: flutter
+  sqflite: ^2.0.0+4  # Version de sqflite pour la gestion de la base de données SQLite
+  path: ^1.8.3        # Nécessaire pour gérer les chemins de fichiers avec sqflite
+  excel: ^2.0.7       # Pour l'export des fichiers Excel
+  share_plus: ^6.3.0  # Pour partager le fichier via WhatsApp
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
